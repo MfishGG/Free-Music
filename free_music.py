@@ -64,6 +64,8 @@ class MainWindow(QWidget):
         self.image_dir = "./image"
         self.music_dir = "./songs"
         self.cache_dir = "./temp"
+
+        self.init_mkdir()
         self.db_path = "./music.db"
         sqlite_manager = SQLiteManager(self.db_path)
         sqlite_manager.create_table('tb_collect_playlist',
@@ -81,6 +83,14 @@ class MainWindow(QWidget):
         self.setup_player_controls()
         self.load_collect_playlist()
         self.logger.info("MainWindow初始化完成")
+
+    def init_mkdir(self):
+        """
+        创建初始需要的目录
+        """
+        for dir_path in [self.image_dir, self.music_dir, self.cache_dir]:
+            if not os.path.exists(dir_path):
+                os.makedirs(dir_path)
 
     def band_event(self):
         # 绑定事件
@@ -228,10 +238,6 @@ class MainWindow(QWidget):
             progress = int((position / duration) * 100)
             self.progress_bar.setValue(progress)
 
-    def seek_position(self):
-        """跳转到指定位置"""
-        self.music_player.set_position(int(position))
-
     def table_double_clicked(self, row):
         """
         表格双击事件处理
@@ -315,6 +321,10 @@ class MainWindow(QWidget):
 
                 for row_index, item in enumerate(song_info):
                     [title, author, pic, wording, musicing, play_url] = item
+                    title = re.sub(r'[^\w\s\u4e00-\u9fff]', '', title)
+                    author = re.sub(r'[^\w\s\u4e00-\u9fff]', '', author)
+                    item[0] = title
+                    item[1] = author
 
                     self.ui.tableWidget_2.setRowCount(row_index + 1)
                     # 逐列设置数据
