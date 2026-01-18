@@ -118,8 +118,8 @@ pyinstaller --onefile --windowed --icon=icons/music.png -n "Free Music" --add-da
 
 ## 许可证
 
-[在此处添加许可证信息]
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
 
 ## 作者
 
-[在此处添加作者信息]
+小鱼  <mfishyj@163.com>
