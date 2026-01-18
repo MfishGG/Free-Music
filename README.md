@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ### 项目依赖
 
 - Python 3.x
-- tkinter (通常随 Python 一起安装)
+- Pyqt5 (通常随 Python 一起安装)
 - Pillow - 用于图像处理
 
 ## 使用方法
