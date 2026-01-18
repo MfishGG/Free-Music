@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: unknown
+@Date: 2026-01-18
+@File: freemain.py
+"""
+
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'freemain.ui'

@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: unknown
+@Date: 2026-01-18
+@File: mysqlite.py
+"""
+
 import sqlite3
 from typing import List, Tuple, Optional, Union
 import os

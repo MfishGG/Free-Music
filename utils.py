@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: unknown
+@Date: 2026-01-18
+@File: utils.py
+"""
+
 import requests
 from concurrent.futures import ThreadPoolExecutor
 import os

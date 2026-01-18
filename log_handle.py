@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: unknown
+@Date: 2026-01-18
+@File: log_handle.py
+"""
+
 import logging
 import os
 from logging.handlers import RotatingFileHandler

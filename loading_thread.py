@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: unknown
+@Date: 2026-01-18
+@File: loading_thread.py
+"""
+
 from PyQt5.QtCore import QThread, pyqtSignal
 
 from mysqlite import SQLiteManager
